@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Metode splice()</title>
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var a = ["Satu","Dua","Tiga","Empat","Lima","Enam"];  
+   
+      var hasilInfo = "Keadaan a awal: <br />" + a.join("<br />");
+      a.splice(2, 1);  // Hapus elemen dengan indeks = 2
+      hasilInfo = hasilInfo + 
+                  "<br /><br />Keadaan a setelah splice(2): <br />" +
+                  a.join("<br />");
+      $("#info").html(hasilInfo);            
+   });
+</script>        
+</head>
+<body>
+<div id="info"></div>
+</body>
+</html>

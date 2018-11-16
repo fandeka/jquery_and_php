@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Metode get()</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {       
+      var daftarDiv = $("div").get();
+      $.each(daftarDiv, function(indeks, obj) {
+         $("#info").append(obj.innerHTML + "<br />");
+      });
+   });
+</script>        
+</head>
+<body>
+<div>Satu</div>
+<div>Dua</div>
+<div><strong>Selesai</strong></div>
+<hr />
+<p id="info"></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Menangani Kejadian Mouse</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#bola").mouseenter(function() {
+         $(this).attr("src","Citra/bola2.png");   
+      });
+      $("#bola").mouseleave(function() {
+         $(this).attr("src","Citra/bola.png");   
+      });
+   });
+</script>        
+</head>
+<body>
+Letakkan penunjuk mouse pada bola untuk 
+melihat efek terhadap bola.
+Kemudian, jauhkan penunjuk mouse dari bola<br />
+<img id="bola" src="Citra/bola.png" />
+</body>
+</html>

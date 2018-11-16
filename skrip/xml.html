@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Membaca Data XML</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#tombol").click(function() {
+         $.ajax( { 
+            url: "negara.xml",        
+            dataType: "xml",
+            success:   function(data) {
+               $("#info").html("<table>");
+               $(data).find("negara").each(function(){
+                  var nama = $(this).find("nama").text(); 
+                  var ibukota = $(this).find("ibukota").text(); 
+                  $("#info").append("<tr><td>" + nama +
+                                    "<\/td><td>" + ibukota +
+                                    "<\/td><\/tr>");
+               });
+               $("#info").append("<\/table>");
+            },
+            error:   function(event, request, setting) {
+               $("#info").text("Kesalahan permintaan halaman: " + 
+                               setting);
+            },
+         });
+      });
+   });
+</script>        
+</head>
+<body>
+<button id="tombol">Baca XML</button>
+<div id="info"></div>
+</body>
+</html>

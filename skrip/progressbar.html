@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Contoh Progressbar</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>                                  
+<link rel="stylesheet" type="text/css"
+href="js/development-bundle/themes/base/jquery.ui.all.css" />        
+<script type="text/javascript">
+   $(document).ready(function() {
+      var total = Math.floor(40 + Math.random()*40);
+      var akumulasi = 0;
+      $("#total").text(total);
+      window.setTimeout ("cek()", 0);
+   });
+   
+   function cek() {
+      if ( typeof akumulasi == "undefined" ) {
+         // Kalau belum terdefinisi
+         akumulasi = 0;
+         $("#kemajuan").progressbar({
+            value: 0
+         });         
+      }   
+
+      var total = $("#total").text();
+      if (akumulasi <= total) {
+         akumulasi = akumulasi + 1; 
+         $("#kemajuan").progressbar({
+            value: Math.floor(akumulasi/total * 100)
+         });    
+         window.setTimeout ("cek()", 1000);
+      }   
+   } 
+</script>        
+</head>
+<body>
+<div id="info">Proses ini memakan waktu 
+<span id="total"></span> detik. 
+Persentase pemrosesan hingga saat ini:</div>
+<div id="kemajuan"></div>
+</body>
+</html>

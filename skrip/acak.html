@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Mengurutkan Bilangan - Versi 1</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $.acak = function(arr) {
+      // Acak dengan menggunakan algoritma Fisher-Yates
+      var i = arr.length;
+      if ( i != 0 ) {
+         while ( --i ) {
+            var j = Math.floor( Math.random() * ( i + 1 ) );
+            var tempi = arr[i];
+            var tempj = arr[j];
+            arr[i] = tempj;
+            arr[j] = tempi;
+         }
+      }
+   
+      return arr;
+   }
+   $(document).ready(function() {    
+      var daftarBilangan = [20, 1, 15, 80, 95, 8, 30];  
+      $("#wadah").html(daftarBilangan.join("<br />"));
+      
+      $("#tombol").click(function(e) {
+         daftarBilangan = $.acak(daftarBilangan);
+         $("#wadah").html(daftarBilangan.join("<br />"));   
+      });
+   });
+</script>        
+</head>
+<body>
+<div id="wadah"></div>
+<button id="tombol">Acak</button>
+</body>
+</html>

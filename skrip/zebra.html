@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Efek Zebra pada Tabel</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      alert("Tekan tombol OK untuk melihat efek zebra");
+      $("#kota tr:even").addClass("zebra");
+   });
+</script>        
+<style type="text/css">
+   .zebra {
+      background-color: #ddd;
+      color: #666
+   }
+</style>   
+</head>
+<body>
+<table id="kota" border="1">
+<thead>
+<tr><th>Kota</th><th>Negara</th></tr>
+</thead>
+<tbody>
+<tr><td>Mekah</td><td>Saudi Arabia</th></td>
+<tr><td>New Delhi</td><td>India</th></td>
+<tr><td>Teheran</td><td>Iran</th></td>
+<tr><td>Tokyo</td><td>Jepang</th></td>
+<tr><td>Vienna</td><td>Austria</th></td>
+<tr><td>Yogya</td><td>Indonesia</th></td>
+</tbody>
+</table>
+</body>
+</html>

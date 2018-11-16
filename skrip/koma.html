@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Memisahkan Nama Hari dengan Koma</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var namaHari = ["Minggu","Senin","Selasa",
+                      "Rabu","Kamis","Jumat",
+                      "Sabtu"];  
+      $("#hari").text(namaHari.join(", "));
+   });
+</script>        
+</head>
+<body>
+<div id="hari"></div>
+</body>
+</html>

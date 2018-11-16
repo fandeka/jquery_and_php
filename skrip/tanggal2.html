@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>DatePicker</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>        
+<link rel="stylesheet" type="text/css" 
+        href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />        
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#tanggal").datepicker({ 
+         dateFormat: "dd-mm-yy",
+         changeMonth: true,
+         changeYear: true 
+      });
+      
+      // Ubah nama singkat hari 
+      $("#tanggal").datepicker("option", "dayNamesMin", 
+         [ "Mg", "Sn", "Sl", "Rb", "Km", "Jm", "Sb"] 
+      );
+      
+      //  Ubah nama lengkap hari  
+      $("#tanggal").datepicker("option", "dayNames", 
+         ["Minggu", "Senin", "Selasa", "Rabu", 
+          "Kamis", "Jumat", "Sabtu"] 
+      );
+      
+      // Ubah nama lengkap bulan
+      $("#tanggal").datepicker("option", "monthNamesShort",
+         ["Jan","Feb","Mar","Apr","Mei","Jun","Jul",
+          "Agu","Sep","Okt","Nov","Des"] 
+      );
+      
+      // Tentukan jangkauan tanggal
+      $( "#tanggal").datepicker( "option", "yearRange", "-100:+0" );
+   });
+</script>        
+</head>
+<body>
+<form action="">
+<label>Tanggal lahir:</label>
+<input id="tanggal" />
+</form>
+</body>
+</html>

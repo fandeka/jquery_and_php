@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Menyembunyikan atau Menampilkan Daftar Pilihan</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+         $("li").click(function(e) {
+           $(e.target).children().toggle();
+      });   
+   });
+</script>        
+</head>
+<body>
+<strong>Tujuan Wisata:</strong>
+<ul>
+   <li>Indonesia
+      <ul>
+         <li>Pulau Bali</li>
+         <li>Pulau Komodo</li>      
+         <li>Danau Toba</li>
+      </ul>
+   </li>
+   <li>Austria
+      <ul>
+         <li>Innsbruck</li>
+         <li>Vienna</li>
+      </ul>
+   </li>  
+</ul>
+
+</body>
+</html>

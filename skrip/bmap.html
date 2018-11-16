@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Google Maps</title>
+<script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAc7lSUDkG68XSf6IVBOO5CRRi_j0U6kJrkFvY4-OX2XYmEAa76BTJQuttRJw3fldGrX5Db2bh6excJQ" ></script>
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jQuery.bMap.1.2.3.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#map").bMap({
+	     mapZoom: 15,
+		 mapCenter:[-7.786148, 110.373788],
+		 markers:{"data":[ {
+				"lat": -7.78900,
+				"lng": 110.364000, 
+				"title": "Stasiun Tugu", 
+				"body": "Stasiun utama kereta api di Yogya"
+			},{
+				"lat":-7.788000,
+				"lng":110.373900, 
+				"title": "Stadion Kridosono", 
+				"body": "Lapangan sepakbola"
+			}	// Penambahan marker bisa dilakukan di sini
+		 ]}
+  	   });
+   });
+</script>  
+</head>
+<body>
+<div style="width:80%;height:400px;margin:0 auto" id="map"></div>
+</body>
+</html>

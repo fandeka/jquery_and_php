@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Chatting</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+           src="js/jquery.charts.js"></script>
+<script type="text/javascript"            
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>
+<script type="text/javascript" src="ch4771ng.js"></script>
+<link rel="stylesheet" type="text/css" 
+      href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />                         
+<style type="text/css">
+   .cl-waktu-pemakai {
+      color: #00ff00;
+   }
+      
+   .cl-pesan {
+      color: #0000ff;
+   }      
+</style>        
+</head>
+<body class="yui-skin-sam">
+   <div id="dialog" title="Informasi">
+      <p>Pesan sudah disimpan</p>
+   </div>
+   <div id="id_wadah">
+      <div id="pesan-masuk" title="Pesan Masuk">
+      </div>
+      
+      <div id="keterangan" title="Informasi">
+          <p>Program chatting ini dibuat sesederhana mungkin.
+             Anda bisa mengembangkannya dengan memaksa pemakai
+             melakukan login dan lain-lain.
+          </p>
+      </div>
+
+      <div id="pemakai" title="Pemakai"> 
+          <p>Anda: <input id="nama-anda" type="text" />
+          </p>
+      </div>
+      
+      <div id="pesan-keluar" title="Penulisan Pesan">
+         <form action="simpesan.php" method="post">
+	           <label>Pesan Anda:</label>
+               <textarea name="pesan" cols="45" rows="8"
+                         id="pesan-anda"></textarea>
+               <input type="hidden" name="pemakai" 
+                      id="id_user_hidden" />          
+         </form>                   
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>DataTable</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/DataTables-1.7.6/media/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" 
+      href="js/DataTables-1.7.6/media/css/demo_table.css" />          
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('#daftar').dataTable( {
+		"bProcessing": true,
+		"sAjaxSource": 'negara.txt'
+	  });
+   });
+</script>        
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" 
+       border="0" class="display" id="daftar">
+   <thead>
+      <tr>
+         <th width="30%">Negara</th>
+         <th width="25%">Ibukota</th>
+         <th width="25%">Benua</th>
+         <th width="20%">Luas(km2)</th>
+      </tr>
+   </thead>
+   <tfoot>
+      <tr>
+         <th>Negara</th>
+         <th>Ibukota</th>
+         <th>Benua</th>
+         <th>Luas (km2)</th>
+      </tr>
+   </tfoot>
+</table>
+</body>
+</html>

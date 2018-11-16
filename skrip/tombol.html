@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Menangani Kejadian Keypressed</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('#nama').keypress(function(e) {
+         if (e.which == '65')
+            alert('Anda baru saja menekan tombol A');
+      });
+   });
+</script>        
+</head>
+<body>
+<form>
+Klik pada kotak. Lalu,
+tekan tombol A untuk melihat apa yang terjadi!
+<input type="text" id="nama" name="nama" />
+</form>
+</body>
+</html>

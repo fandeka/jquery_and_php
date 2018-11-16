@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Password</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+src="js/jQuery-Validation-Engine/js/jquery.validationEngine.js">
+</script>        
+<script type="text/javascript" 
+src="js/jQuery-Validation-Engine/js/jquery.validationEngine-en.js">
+</script>
+<link rel="stylesheet" type="text/css" 
+href="js/jQuery-Validation-Engine/css/validationEngine.jquery.css" />        
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#formulir").validationEngine();
+   });
+   
+   function cekPassword() {
+      if ($("#passw1").val() != $("#passw2").val()) 
+         return "Kedua password tidak cocok";
+   }
+   
+</script>        
+<style type="text/css">
+   label {
+      float: left;
+      width: 200px;
+   }
+</style>
+</head>
+<body>
+<fieldset>
+<legend>Contoh Pemasukan Data</legend>
+<form id="formulir" method="post" action="tespost.php">
+   <p>
+   <label>Password</label>
+   <input value="" 
+    class="validate[required,minSize[6],maxSize[15]]" type="password" 
+    name="passw1" id="passw1" />
+   </p>
+   
+   <p>       
+   <label>Password sekali lagi</label>       
+   <input value="" 
+    class="validate[required,minSize[6],maxSize[15],funcCall[cekPassword]]" 
+    type="password" name="passw2" id="passw2" />
+   </p>
+   
+   <input class="submit" type="submit" value="Kirim"/>
+</form>
+</fieldset>
+</body>
+</html>

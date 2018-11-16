@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Tulisan yang Membesar</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#tombol").click(function() {
+         $("#pepatah").animate(
+            {fontSize: "48px" }, 2500);   
+            
+         $("#tombol").hide();    
+      });
+      
+   });
+</script>        
+</head>
+<body>
+<div id="pepatah">Sedikit demi sedikit, 
+lama-lama menjadi bukit</div>
+<button id="tombol">Animasi</button>
+</body>
+</html>

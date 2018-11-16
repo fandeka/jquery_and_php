@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Mengakses Atribut Objek dengan each</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var kodeHari = { minggu: 0, senin: 1, selasa: 2,
+                       rabu: 3, kamis: 4, jumat: 5, sabtu: 6 };
+      $.each(kodeHari, function(indeks, nilai) {                 
+         $("#info").append("<li>" + indeks + " : " +
+                           nilai + "<\/li>");
+      });   
+   });
+</script>        
+</head>
+<body>
+<ul id="info"></ul>
+</body>
+</html>

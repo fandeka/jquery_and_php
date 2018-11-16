@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<daftarnegara>
+   <negara>
+      <nama>Austria</nama>
+      <ibukota>Wina</ibukota>
+   </negara>
+   <negara>
+      <nama>India</nama>
+      <ibukota>New Delhi</ibukota>
+   </negara>
+   <negara>
+      <nama>Indonesia</nama>
+      <ibukota>Jakarta</ibukota>
+   </negara>
+   <negara>
+      <nama>Mesir</nama>
+      <ibukota>Kairo</ibukota>
+   </negara>
+</daftarnegara>

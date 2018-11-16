@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Dialog Bersifat Modal</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>        
+<link rel="stylesheet" type="text/css" 
+        href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />                                
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#dialog").dialog ({
+         modal: true,
+         autoOpen: false
+      });
+      
+      $("#tombol").click(function() {
+         $("#dialog").dialog("open");
+      });
+   });
+</script>        
+</head>
+<body>
+<div id="dialog" title="Contoh dialog modal">
+  <p>Kotak dialog ini bersifat modal. 
+     Anda tidak bisa mengakses halaman web di bawah ini,
+     kecuali Anda menutup kotak dialog ini dulu.
+   </p>
+</div>
+<button id="tombol">Modal</button>
+</body>
+</html>

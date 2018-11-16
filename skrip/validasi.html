@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Memvalidasi Masukan pada Formulir</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#tombol").click(function() {
+         // Periksa nama
+         if ( $.trim($("#nama").val()) == "" ) {
+             alert("Nama harus diisi");
+             $("#nama").focus();
+             return false;
+         }   
+
+         // Periksa hobby
+         if ( $("#hobby").val().replace(/^\s+|\s+$/g,"") == "" ) {
+             alert("Hobby harus diisi");
+             $("#hobby").focus();
+             return false;
+         }   
+      });   
+   });
+</script>        
+<style type="text/css">
+   label {
+      float: left;
+      width: 100px;
+   }
+</style>   
+</head>
+<body>
+<form action="xxx.html">
+<p>
+<label>Nama: </label>
+<input type="text" id="nama" name="nama" value="" />
+</p>
+<p>
+<label>Hobby: </label>
+<input type="text" id="hobby" name="hobby" value="" />
+</p>
+<p>
+<input type="submit" id="tombol" value="Kirim" />
+</p>
+</form>
+</body>
+</html>

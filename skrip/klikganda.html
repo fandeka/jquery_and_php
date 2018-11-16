@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Kejadian dblclick 4</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+         $("#bola").dblclick(function() {
+         if ($(this).attr("src") == "Citra/bola.png")
+            $(this).attr("src","Citra/bola2.png");   
+         else
+            $(this).attr("src", "Citra/bola.png");      
+      });
+     
+   });
+</script>        
+</head>
+<body>
+Klik ganda pada bola untuk melihat efek terhadap bola<br />
+<img id="bola" src="Citra/bola.png" />
+</body>
+</html>

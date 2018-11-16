@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Array Objek</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var daftarRuang = [
+      {
+         "nomor" : 101,
+         "nama"  : "Pascal",
+         "letak" : "Gedung Utara"
+      },
+      {
+         "nomor" : 102,
+         "nama"  : "Basic",
+         "letak" : "Gedung Utara"
+      },
+      {
+         "nomor" : 201,
+         "nama"  : "Prolog",
+         "letak" : "Gedung Selatan"
+      },
+      {
+         "nomor" : 202,
+         "nama"  : "Cobol", 
+         "letak" : "Gedung Selatan"
+      },
+      {
+         "nomor" : 301,
+         "nama"  : "Ada",
+         "letak" : "Gedung Timur"
+      }
+      ];
+      
+      $.each(daftarRuang, function(indeks, ruangan) {                
+         $("#ruang").append("<tr><td>" + ruangan.nomor + 
+                           "<\/td><td>" + ruangan.nama +
+                           "<\/td><td>" + ruangan.letak +
+                           "<\/td><\/tr>");
+      });   
+   });
+</script>        
+</head>
+<body>
+<table id="ruang" border="1">
+</table>
+</body>
+</html>

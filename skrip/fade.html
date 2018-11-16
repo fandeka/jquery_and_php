@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Efek Fade</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#fadeIn").click(function() {
+         $("#altstadt").fadeTo(1200, 0.2);
+         $("#altstadt").fadeIn(1200);
+      });
+      
+      $("#fadeOut").click(function() {
+         $("#altstadt").fadeOut(1200);
+      });
+   });
+</script>        
+</head>
+<body>
+<img id="altstadt" src="Citra/altstadt.png" />
+<p>
+<button id="fadeIn">Fade In</button>
+<button id="fadeOut">Fade Out</button>
+</p>
+</body>
+</html>

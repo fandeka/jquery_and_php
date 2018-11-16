@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Melihat Efek bind() dan unbind()</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#tombol1").bind("click", function() {
+         alert("Anda baru saja mengklik tombol 'Klik Saya'");
+      });
+      
+      $("#tombol2").bind("click", function() {
+         $("#tombol1").unbind("click");
+         alert("Coba klik pada 'Klik Saya'. Tak bekerja lagi");
+      });
+   });
+</script>        
+</head>
+<body>
+<button id="tombol1">Klik Saya</button>
+<button id="tombol2">Unbind</button>
+</body>
+</html>

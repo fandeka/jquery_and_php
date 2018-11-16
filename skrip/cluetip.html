@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Tiny Carousel</title>
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.hoverIntent.js" ></script> 
+<script  type="text/javascript" src="js/jquery.cluetip.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/skins/tango/skin.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery.cluetip.css"  />
+<script type="text/javascript">
+   $(document).ready(function() {
+      jQuery("#mycarousel").jcarousel({
+         vertical: true,
+         scroll: 2
+      });
+      $("a.title").cluetip({splitTitle: "|"});
+   });
+</script>        
+<style type="text/css">
+   img {
+      width: 75px;
+      height: 75px;
+   }
+</style>
+</head>
+<body>
+<div>
+   <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">   
+      <li><a class="title" href="#" 
+             title="Adenium 'Laviola'|Jenis Kamboja Jepang|
+                   dengan warma bunga yang menawan">
+          <img src="Citra/Adenium_Laviola.png" border="false" /></a></li>
+      <li><a class="title" href="#" 
+             title="Alocasia 'Hilo Beauty'|Alokasi dengan penampilan|
+                   mirip keladi">
+          <img src="Citra/Alocasia_Hilo_Beauty.png" 
+               border="false" /></a></li>
+      <li><a class="title" href="#" 
+             title="Begonia olsoniae|Begonia dengan daun seperti |
+                   berbeludru">
+          <img src="Citra/Begonia_olsoniae.png" 
+               border="false" /></a></li>
+      <li><a class="title" href="#" 
+             title="Pistia stratotes|Merupakan tanaman air.|
+                   Dikenal dengan julukan 'Kubis Air'">
+          <img src="Citra/Pistia_Stratiotes.png" 
+               border="false" /></a></li>
+      <li><a class="title" href="#" 
+             title="Sansevieria 'Gold Flame'|Jenis Lidah Mertua|
+                   dengan kombinanasi warna yang memikat">
+          <img src="Citra/Sans_Gold_Flame.png" 
+               border="false" /></a></li>
+      <li><a class="title" href="#" 
+             title="Zehyranthus reginae|Bagus dijadikan sebagai tanaman|
+                   kebun. Warna bunganya indah">
+          <img src="Citra/Zehyranthus_reginae.png" 
+               border="false" /></a></li>
+   </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Utilitas $.map()</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var suhu = [ 29, 30, 28, 30, 31, 28, 30 ];
+      var fluktuasi = $.map(suhu, function(x) {
+         return x - 30;
+      });
+      
+      $("#info").html(fluktuasi.join("<br />"));
+   });
+</script>        
+</head>
+<body>
+<div id="info"></div>
+</body>
+</html>

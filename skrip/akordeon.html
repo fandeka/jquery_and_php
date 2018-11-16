@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Contoh Accordion</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>                                  
+<link rel="stylesheet" type="text/css"
+href="js/development-bundle/themes/base/jquery.ui.all.css" />        
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#isi").accordion({
+         event: "mouseover"
+		});
+   });
+</script>        
+</head>
+<body>
+<div id="isi">
+   <div class="menu"><a href="#">Bab 1</a></div>
+   <div>
+	  Membahas seputar HTML. Menunjukkan bahwa
+      mempelajari HTML itu sangat mudah. Dilengkapi
+      banyak contoh menarik.	
+   </div>
+   <div class="menu"><a href="#">Bab 2</a></div>
+   <div>
+	  Membicarakan seputar CSS. Menunjukkan bahwa
+      mempelajari CSS itu sangat mudah. Dilengkapi
+      banyak contoh menarik.	
+   </div>
+   <div class="menu"><a href="#">Bab 3</a></div>
+   <div>
+	  Mengupas seputar JavaScript. Menunjukkan bahwa
+      mempelajari JavaScript itu sangat mudah. Dilengkapi
+      banyak contoh menarik.	
+   </div>   
+      <div class="menu"><a href="#">Bab 4</a></div>
+   <div>
+	  Menjabarkan seputar PHP. Menunjukkan bahwa
+      mempelajari PHP itu sangat mudah. Dilengkapi
+      banyak contoh menarik.	
+   </div>
+</div>
+</body>
+</html>

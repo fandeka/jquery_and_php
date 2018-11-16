@@ -1,0 +1,15 @@
+   .bingkai {
+       border-style: solid;
+       border-left-color: gray;
+       border-top-color: gray;
+       border-right-color: silver;
+       border-bottom-color: silver;
+       margin-left: auto;
+       margin-right: auto;       
+       padding: 20px;
+       width: 400px;
+       text-align: center;
+       background-color: blue;
+       color: white;
+       font-size: 18px;
+   }

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Contoh hover</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('#tombol').hover(
+         function() {
+            $(this).addClass('hover')},
+         function() {
+            $(this).removeClass('hover')}   
+      );
+   });
+</script>        
+<style type="text/css">
+   .hover {
+      background-color: #ffff99;
+      color: blue;
+      font-weight: bold;
+      width: 100px;
+   }
+</style>   
+</head>
+<body>
+<button id="tombol">Uji</button>
+</body>
+</html>

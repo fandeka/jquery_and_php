@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>validator Formulir</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+src="js/jQuery-Validation-Engine/js/jquery.validationEngine.js">
+</script>        
+<script type="text/javascript" 
+src="js/jQuery-Validation-Engine/js/jquery.validationEngine-en.js">
+</script>
+<link rel="stylesheet" type="text/css" 
+href="js/jQuery-Validation-Engine/css/validationEngine.jquery.css" />        
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#formulir").validationEngine();
+   });
+</script>        
+<style type="text/css">
+   label {
+      float: left;
+      width: 200px;
+   }
+</style>
+</head>
+<body>
+<fieldset>
+<legend>Contoh Pemasukan Data</legend>
+<form id="formulir"  method="post" action="tespost.php">
+   <p>
+   <label>Nama</label>
+   <input value=""  
+          class="validate[required]" 
+          type="text" name="nama"  id="nama" />
+   </p>
+   
+   <p>       
+   <label>Tgl. lahir (YYYY-MM-DD)</label>       
+   <input value=""  
+          class="validate[required,custom[date]]" 
+          type="text" name="tglahir"  id="tglahir" />
+   </p>
+   
+   <p>       
+   <label>Telepon</label>       
+   <input value=""  
+          class="validate[required,custom[phone]]" 
+          type="text" name="telepon"  id="telepon" />
+   </p>
+
+   <p>
+   <label>Jumlah mobil</label>       
+   <input value=""  
+          class="validate[required,custom[integer]]" 
+          type="text" name="jumlah" id="jumlah"  />
+   </p>
+
+
+   <p>
+   <label>Phi</label>       
+   <input value="3.14"  
+          class="validate[required,custom[number]]" 
+          type="text" name="phi" id="phi"  />
+   </p>
+      
+      <p>
+   <label>Email</label>       
+   <input value=""  
+          class="validate[required,custom[email]]" 
+          type="text" name="email" id="email"  />
+   </p>
+
+   <p>
+   <label>URL</label>       
+   <input value="aka@"  
+          class="validate[required,custom[url]]" 
+          type="text" name="url" id="url"  />
+   </p>
+
+   <p>
+   <label>Alamat IP</label>       
+   <input value="127.0.0.1"  
+          class="validate[required,custom[ipv4]]" 
+          type="text" name="ip" id="ip"  />
+   </p>
+
+   <p>
+   <label>Hanya deretan huruf</label>       
+   <input value=""  
+          class="validate[required,custom[onlyLetterSp]]" 
+          type="text" name="string" id="string"  />
+   </p>
+
+   <input class="submit" type="submit" value="Kirim"/>
+</form>
+</fieldset>
+</body>
+</html>

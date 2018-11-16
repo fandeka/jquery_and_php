@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Menangani Kesalahan</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#info").hide();
+      $("#tombol").click(function() {
+         $.ajax( { 
+            url: $("#url").val(),        
+            success:   function(data) {
+               $("#info").text(data);
+               $("#info").show();
+            },
+            error:   function(xhr, teksStatus, kesalahan) {
+               $("#info").text("Kesalahan permintaan halaman: " + 
+                               kesalahan);
+               $("#info").show();
+            }
+         });
+      });
+   });
+</script>        
+</head>
+<body>
+<form action="">
+URL: <input type="text" id="url" />
+</form>
+<button id="tombol">Proses</button>
+<p>
+<textarea id="info" readonly="true" 
+          cols="80" rows="20"></textarea>
+</p>
+</body>
+</html>

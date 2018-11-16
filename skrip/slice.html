@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Metode slice()</title>
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var a = ["Satu","Dua","Tiga","Empat","Lima","Enam"];  
+      var b = a.slice(2);
+   
+      var hasilInfo = "Keadaan a awal: <br />" + a.join("<br />");
+      hasilInfo = hasilInfo + 
+                  "<br /><br />Keadaan a setelah slice(2): <br />" +
+                  a.join("<br />") +
+                  "<br /><br />Hasil pada b: <br />" + 
+                  b.join("<br />");
+      $("#info").html(hasilInfo);            
+   });
+</script>        
+</head>
+<body>
+<div id="info"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>DataTable</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/DataTables-1.7.6/media/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" 
+      href="js/DataTables-1.7.6/media/css/demo_table.css" />          
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('#daftar').dataTable( {
+		"bProcessing": true,
+		"sAjaxSource": 'bfilm.php',
+		"iDisplayLength": 3, 
+		"oLanguage": {
+		   "sProcessing":   "Sedang memproses...",
+           "sLengthMenu":   "Tampilkan _MENU_ entri",
+           "sZeroRecords":  "Tidak ditemukan data yang sesuai",
+           "sInfo":         "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+           "sInfoEmpty":    "Menampilkan 0 sampai 0 dari 0 entri",
+           "sInfoFiltered": "(disaring dari _MAX_ entri keseluruhan)",
+           "sInfoPostFix":  "",
+           "sSearch":       "Cari:",
+           "sUrl":          "",
+              "oPaginate": {
+              "sFirst":    "Pertama",
+              "sPrevious": "Sebelumnya",
+              "sNext":     "Selanjutnya",
+              "sLast":     "Terakhir"
+           }
+        }   
+	  });
+   });
+</script>        
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" 
+       border="0" class="display" id="daftar">
+   <thead>
+      <tr>
+         <th width="60%">Nama</th>
+         <th width="40%">Tanggal Lahir</th>
+      </tr>
+   </thead>
+   <tfoot>
+      <tr>
+         <th>Nama</th>
+         <th>Tanggal Lahir</th>
+      </tr>
+   </tfoot>
+</table>
+</body>
+</html>

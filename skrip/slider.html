@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Slider</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>        
+<link rel="stylesheet" type="text/css" 
+        href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />                                
+<script type="text/javascript">
+   $(document).ready(function() {
+      var nilaiAwal = 5;
+      $("#volume").text(nilaiAwal);
+      
+      $("#slider").slider({
+		 orientation: "vertical",
+         min: 0,
+         max: 10,
+         value: nilaiAwal,
+         slide: function( event, ui ) {
+            $("#volume").text(ui.value);
+         }
+      });
+   });
+</script>        
+</head>
+<body>
+<div id="slider" style="height:200px;"></div>
+<div>Volume: <span id="volume"></span></div>
+</body>
+</html>

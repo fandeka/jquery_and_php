@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Efek dengan slideDown dan slideUp</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#slideDown").click(function() {
+         $("#altstadt").slideDown(1200);
+      });
+      $("#slideUp").click(function() {
+         $("#altstadt").slideUp(1200);
+      });
+   });
+</script>        
+</head>
+<body>
+<img id="altstadt" src="Citra/altstadt.png" />
+<p>
+<button id="slideDown">Slide Down</button>
+<button id="slideUp">Slide Up</button>
+</p>
+</body>
+</html>

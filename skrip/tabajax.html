@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Tabs dengan Ajax</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>        
+<link rel="stylesheet" type="text/css" 
+        href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />                                
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#star").tabs();
+   });
+</script>        
+</head>
+<body>
+<div id="star">
+   <ul>
+ 	  <li><a href="#tabs-1">Info</a></li>
+	  <li><a href="caribin.html">Cari Bintang Film</a></li>
+   </ul>
+   <div id="tabs-1">
+	  <div>Ini sebuah contoh tab yang menggunakan 
+      data yang ditulis pada div. Contoh yang menggunakan 
+      pembacaan dari dokumen lain dapat Anda lihat pada tab 
+      'Cari Bintang Film'
+      </div>
+   </div>
+</div>
+</body>
+</html>

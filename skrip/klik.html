@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Kejadian click</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+         $("div").click(function(e) {
+         alert($(e.target).text());
+      });
+   });
+</script>        
+</head>
+<body>
+<div>div 1</div>
+<div>div 2</div>
+<div>div 3</div>
+<div>div 4</div>
+</body>
+</html>

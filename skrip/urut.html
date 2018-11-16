@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Mengurutkan Data String</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      var nama = ["Widyasari","Zaini","Sita Dewi",
+                      "Arini","Marwan Gani","Bakdi",
+                      "Erwinia Fitriasari"];  
+      nama = nama.sort();
+      $("#info").html(nama.join("<br />"));
+   });
+</script>        
+</head>
+<body>
+<div id="info"></div>
+</body>
+</html>

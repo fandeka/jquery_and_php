@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>jCarousel</title>
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/skins/tango/skin.css" />
+<script type="text/javascript">
+   $(document).ready(function() {
+      jQuery("#carouselku").jcarousel({
+         vertical: false,
+         scroll: 1
+      });
+   });
+</script>        
+<style type="text/css">
+   img {
+      width: 75px;
+      height: 75px;
+   }
+</style>
+</head>
+<body>
+<div>
+   <ul id="carouselku" class="jcarousel jcarousel-skin-tango">
+      <li><img src="Citra/Adenium_Laviola.png" /></li>
+      <li><img src="Citra/Alocasia_Hilo_Beauty.png" /></li>
+      <li><img src="Citra/Begonia_olsoniae.png" /></li>
+      <li><img src="Citra/Pistia_Stratiotes.png" /></li>
+      <li><img src="Citra/Sans_Gold_Flame.png" /></li>
+      <li><img src="Citra/Zehyranthus_reginae.png" /></li>
+   </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Jajak Pendapat</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+           src="js/jquery.charts.js"></script>
+<script type="text/javascript"            
+src="js/js/jquery-ui-1.8.10.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" 
+      href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />                         
+<script type="text/javascript">
+   $(document).ready(function() {
+      window.setTimeout('bacaData()', 0);
+      
+      // Kotak dialog
+      $("#dialog").dialog ({
+         autoOpen: false,
+         modal: true
+      });
+
+      // Kosongkan semua tombol radio
+      $('.radio').attr("checked", false);
+         
+      // Cek radio
+      $('.radio').click(function(e){   
+         $.ajax({
+            url: "poll.php",   
+            type: "POST",     
+            data: {"isian": $(e.target).val()},
+         });
+         
+         // Tampilkan kotak dialog
+         $("#dialog").dialog("open");  
+      });
+       
+   });  
+      
+   function bacaData() {
+      $.ajax( { 
+         url: "datapoll.php",        
+         dataType: "json",
+         success:   function(data) {
+               
+            // Isikan data ke tabel
+            $.each(data, function(indeks, jajak) {
+                 $("#data-1").text(jajak["pil1"]);
+                 $("#data-2").text(jajak["pil2"]);                 
+                 $("#data-3").text(jajak["pil3"]);
+                 $("#data-4").text(jajak["pil4"]);                 
+                 $("#data-5").text(jajak["pil5"]);
+            });
+   
+            // Hapus kalau ada kelas chartscontainer
+            if ($("div").hasClass("chartscontainer"))
+               $(".chartscontainer").remove();
+            
+            // Tampilkan gambar
+            $("#grafik").charts({duration: 0});
+         },
+      });
+         
+      window.setTimeout('bacaData()', 5000);
+   }
+</script>                   
+<style type="text/css">
+   #panelKiri {
+      float: left;
+      display: inline;
+      margin-left: 80px;
+      width: 270px;
+   }
+      
+   #panelKanan {
+      background-color: #C2C2D7;
+      float: right;
+      margin-left: 15px;
+      width:350px;
+      padding: 10px;
+      height: 700px;
+   }
+      
+   #panelPertanyaan {
+      background-color: white;   
+      margin: 10px;
+      padding: 10px;
+   }
+      
+   #panelHasil {
+      background-color: white;   
+      margin: 10px;
+      padding: 10px;
+   }
+
+   /* Untuk mengatur grafik supaya bullet tidak muncul */
+			
+   .chartscontainer li {
+      list-style: none;
+   }	
+   
+</style> 
+</head>
+<body>
+   <div id="dialog" title="Informasi">
+      <p>Terima kasih atas partisipasi mengikuti 
+         jajak pendapat
+      </p>
+   </div>
+
+   <div id="panelKiri">
+      <h3>Contoh Jajak Pendapat</h3>
+   </div>
+   
+   <div id="panelKanan">   
+      <div id="panelPertanyaan"> 
+         <h2>Jajak Pendapat</h2>
+	     Menurut Anda, Apakah website ini memberikan manfaat?
+         <br /><br />
+  	     <input type="radio" class="radio" 
+                name="radio-jajak" value="1" />
+         Sangat bermanfaat<br />
+         <input type="radio" class="radio" 
+                name="radio-jajak" value="2" />
+         Bermanfaat<br />
+         <input type="radio" class="radio"
+                name="radio-jajak" value="3" />
+         Cukup bermanfaat<br />
+         <input type="radio" class="radio"
+                name="radio-jajak" value="4" />
+         Kurang bermanfaat<br />
+         <input type="radio" class="radio"
+                name="radio-jajak" value="5" />
+         Tidak bermanfaat<br />       
+      </div>
+      <div id="panelHasil">
+         <h2>Hasil Jajak Pendapat</h2>
+         <table id="grafik">
+            <thead>
+            <tr>
+            <th></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Sangat Bermanfaat</td>
+                  <td id="data-1">0</td>
+               </tr>
+               <tr>
+                  <td>Bermanfaat</td>
+                  <td id="data-2">0</td>
+               </tr>
+               <tr>
+                  <td>Cukup Bermanfaat</td>
+                  <td id="data-3">0</td>
+               </tr>
+               <tr>
+                  <td>Kurang Bermanfaat</td>
+                  <td id="data-4">0</td>
+               </tr>
+               <tr>
+                  <td>Tidak Bermanfaat</td>
+                  <td id="data-5">0</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</body>
+</html>

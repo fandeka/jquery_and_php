@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Mengatur Input Text</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      alert("Klik OK untuk melihat efek perintah berikut");
+      $(":input").css("background-color", "#ccffcc");      
+   });
+</script>        
+<style type="text/css">
+   label {
+      float: left;
+      width: 100px;
+   }
+</style>   
+</head>
+<body>
+<form>
+<p>
+<label>Nama: </label>
+<input type="text" id="nama" name="nama" value="" />
+</p>
+<p>
+<label>Alamat: </label>
+<input type="text" id="alamat" name="alamat" value="" />
+</p>
+<p>
+<label>Kota: </label>
+<input type="text" id="kota" name="kota" value="" />
+</p>
+</form>
+</body>
+</html>

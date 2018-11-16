@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Mengirim Melalui Post()</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#kirim").click(function() {
+         $("#info").html("");
+         $.post("infopost.php",
+               $("#formPribadi").serialize(),
+               function(data){
+                  $("#info").html(data);
+               }
+         );
+         return false;
+      });
+   });
+</script>        
+</head>
+<body>
+<form id="formPribadi" method="post"
+      action="">
+  <p>
+  <label>Nama:</label>
+  <input type="text" name="nama" />
+  </p>
+  <p>
+  <label>Hobby:</label>
+  <input type="text" name="hobby" />
+  <p>
+  <input id="kirim" type="submit" value="Kirim" />
+</form>
+<div id="info"></div>
+</body>
+</html>

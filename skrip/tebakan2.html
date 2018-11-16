@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Tebakan - Versi 2</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      var el = "<div class='kotak' id='dialog'>" +
+                 "Hayo, tebak! Di tengah pasar ada apa?</div>";      
+      $(el).insertAfter("body");
+      $("#dialog").show();
+      $("#dialog").animate({opaque: "1"}, 3000, "linear",
+         function() {
+            $("#dialog").hide().text("Jawabannya adalah...S");
+            $("#dialog").fadeIn(2000);
+         }      
+      );  
+   });
+</script>   
+<style type="text/css">
+   .kotak {
+       border-style: solid;
+       border-left-color: gray;
+       border-top-color: gray;
+       border-right-color: silver;
+       border-bottom-color: silver;
+       margin-left: auto;
+       margin-right: auto;       
+       width: 400px;
+       text-align: center;
+       background-color: blue;
+       color: white;
+       font-size: 36px;
+   }
+</style>     
+</head>
+<body>
+</body>
+</html>

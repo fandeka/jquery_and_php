@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Kotak Dialog untuk Konfirmasi</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" 
+        src="js/js/jquery-ui-1.8.10.custom.min.js"></script>        
+<link rel="stylesheet" type="text/css" 
+        href="js/css/ui-lightness/jquery-ui-1.8.10.custom.css" />                                
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#dialog").dialog ({
+         modal: true,
+         autoOpen: false,
+         resizable: false,
+         buttons: {
+			"Ya": function() {
+			   $("#info").text(
+                  "Anda baru saja menekan tombol Ya");
+		       $(this).dialog("close");
+		    },
+		    "Tidak": function() {
+  			   $("#info").text(
+                  "Anda baru saja menekan tombol Tidak");
+		       $(this).dialog("close");
+		    },
+		 }   
+      });
+      
+      $("#tombol").click(function() {
+         $("#info").text("Klik tombol Ya atau Tidak");
+         $("#dialog").dialog("open");
+      });
+   });
+</script>        
+</head>
+<body>
+<div id="dialog" title="Konfirmasi">
+  <p>Ini hanya sebuah contoh. Anda menyukainya?
+   </p>
+</div>
+<button id="tombol">Konfirmasi</button>
+<div id="info"></div>
+</body>
+</html>

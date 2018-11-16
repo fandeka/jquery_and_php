@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Menyertakan Tanda Tunggu</title>
+<script type="text/javascript" 
+        src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {    
+      $("#tombol").click(function() {
+         $.ajax( { 
+            url: "tunda.php",  
+            timeout: 3000,
+            beforeSend:   function() {
+               $("#info").html("<img src='Citra/ajax-loader.gif' />")
+            },
+            success:   function(data) {
+               $("#info").text("Server sudah membalas");
+            },
+            error:   function(xhr, teksStatus, kesalahan) {
+               $("#info").text("Kesalahan permintaan halaman: " + 
+                               kesalahan);
+            }
+         });
+      });
+   });
+</script>        
+</head>
+<body>
+<button id="tombol">Proses</button>
+<div id="info"
+</body>
+</html>
